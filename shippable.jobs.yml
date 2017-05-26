@@ -20,7 +20,7 @@ jobs:
   - name: demo-env-variable-runSh-job                                
     type: runSh                                 
     steps:                                      
-      - IN: deploy-test-ecs                 
+      - IN: demo-env-variable-deploy-job                 
       - TASK:
         - script: echo "hello"
     flags:
