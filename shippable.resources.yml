@@ -21,7 +21,7 @@ resources:
     flags:
       - release-single-component
 
-  - name: env-aws-ecs-cluster
+  - name: demo-env-variable-ecs-cluster
     type: cluster
     integration: aws-working-ecs
     pointer:
