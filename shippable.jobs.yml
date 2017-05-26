@@ -24,5 +24,7 @@ jobs:
       - TASK:
         - script: echo "testing env variable"
         - script: cat $DEPLOYJOB_STATE/manifests.json | jq '.'
+        - script: cat manifests.json | jq '.[].images' | jq '.[0].image'
+        - script: cat manifests.json | jq '.[].images' | jq '.[0].tag'
     flags:
       - demo-env-variable
