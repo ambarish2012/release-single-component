@@ -1,12 +1,12 @@
 resources:
   - name: demo-img
     type: image
-    integration: dr-dockerhub
+    integration: docker
     pointer:
-      sourceName: "devopsrecipes/release-push-docker-hub"
+      sourceName: "ambarish2012/release-push-docker-hub"
       isPull: false
     seed:
-      versionName: master.2
+      versionName: master.3
     flags:
       - release-single-component
 
