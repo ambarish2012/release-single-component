@@ -6,7 +6,7 @@ jobs:
       - IN: demo-img-opts
       - TASK: managed
     flags:
-      - release-single-component
+      - demo-env-variable
 
   - name: demo-env-variable-deploy-job
     type: deploy
@@ -15,7 +15,7 @@ jobs:
       - IN: demo-env-variable-ecs-cluster
       - TASK: managed
     flags:
-      - release-single-component
+      - demo-env-variable
 
   - name: demo-env-variable-runSh-job                                
     type: runSh                                 
@@ -23,4 +23,5 @@ jobs:
       - IN: deploy-test-ecs                 
       - TASK:
         - script: echo "hello"
-        
+    flags:
+      - demo-env-variable
