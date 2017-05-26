@@ -1,5 +1,5 @@
 jobs:
-  - name: demo-man
+  - name: demo-env-variable-manifest-job
     type: manifest
     steps:
       - IN: demo-img
@@ -8,16 +8,16 @@ jobs:
     flags:
       - release-single-component
 
-  - name: deploy-test-ecs
+  - name: demo-env-variable-deploy-job
     type: deploy
     steps:
-      - IN: demo-man
-      - IN: env-aws-ecs-cluster
+      - IN: demo-env-variable-manifest-job
+      - IN: demo-env-variable-ecs-cluster
       - TASK: managed
     flags:
       - release-single-component
 
-  - name: runSh-job                                
+  - name: demo-env-variable-runSh-job                                
     type: runSh                                 
     steps:                                      
       - IN: deploy-test-ecs                 
