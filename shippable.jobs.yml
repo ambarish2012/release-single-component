@@ -23,6 +23,6 @@ jobs:
       - IN: demo-env-variable-deploy-job                 
       - TASK:
         - script: echo "hello"
-        - script: echo $DEMOENVVARIABLEIMAGE_VERSIONNAME
+        - script: cat at DEPLOYJOB_STATE/manifests.json | jq '.images'
     flags:
       - demo-env-variable
