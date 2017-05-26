@@ -1,5 +1,5 @@
 resources:
-  - name: demo-img
+  - name: demo-env-variable-image
     type: image
     integration: docker
     pointer:
@@ -10,7 +10,7 @@ resources:
     flags:
       - release-single-component
 
-  - name: demo-img-opts
+  - name: demo-env-variable-image-opts
     type: dockerOptions
     version:
       memory: 128
@@ -30,7 +30,7 @@ resources:
     flags:
       - release-single-component
 
-  - name: demo-release-version
+  - name: demo-env-variable-image-release-version
     type: version
     seed:
       versionName: "1.0.0"
