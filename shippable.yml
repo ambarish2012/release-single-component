@@ -16,7 +16,7 @@ env:
     - TESTS_LOC_DIR=$SHIPPABLE_REPO_DIR/tests
     - MOD_LOC=$SHIPPABLE_REPO_DIR/node_modules/.bin/
     - DOCKER_REPO=release-push-docker-hub
-    - DOCKER_ACC=devopsrecipes # {account name}
+    - DOCKER_ACC=ambarish2012 # {account name}
 
 build:
 
@@ -43,5 +43,5 @@ integrations:
   # adding docker hub integration so that credentials are available to CI Job
   # http://docs.shippable.com/integrations/imageRegistries/dockerHub/
   hub:
-    - integrationName: dr-dockerhub
+    - integrationName: docker
       type: docker
