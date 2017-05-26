@@ -23,7 +23,7 @@ resources:
 
   - name: env-aws-ecs-cluster
     type: cluster
-    integration: dr-aws
+    integration: aws-working-ecs
     pointer:
       sourceName : "release-push-docker-hub-ecs"
       region: "us-west-2"
