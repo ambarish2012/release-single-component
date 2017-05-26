@@ -20,9 +20,9 @@ jobs:
   - name: demo-env-variable-runSh-job                                
     type: runSh                                 
     steps:                                      
-      - IN: demo-env-variable-deploy-job                 
+      - IN: deploy-job                 
       - TASK:
-        - script: echo "hello"
+        - script: echo "testing env variable"
         - script: cat $DEPLOYJOB_STATE/manifests.json | jq '.images'
     flags:
       - demo-env-variable
