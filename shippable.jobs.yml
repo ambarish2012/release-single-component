@@ -8,7 +8,7 @@ jobs:
     flags:
       - demo-env-variable
 
-  - name: demo-env-variable-deploy-job
+  - name: deploy-job
     type: deploy
     steps:
       - IN: demo-env-variable-manifest-job
