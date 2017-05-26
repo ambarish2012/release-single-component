@@ -25,7 +25,7 @@ resources:
     type: cluster
     integration: aws-working-ecs
     pointer:
-      sourceName : "release-push-docker-hub-ecs"
+      sourceName : "demo-env-variable-ecs"
       region: "us-west-2"
     flags:
       - demo-env-variable
