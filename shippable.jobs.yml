@@ -2,8 +2,8 @@ jobs:
   - name: demo-env-variable-manifest-job
     type: manifest
     steps:
-      - IN: demo-img
-      - IN: demo-img-opts
+      - IN: demo-env-variable-image
+      - IN: demo-env-variable-image-opts
       - TASK: managed
     flags:
       - demo-env-variable
@@ -23,5 +23,6 @@ jobs:
       - IN: demo-env-variable-deploy-job                 
       - TASK:
         - script: echo "hello"
+        - script: echo $DEMOIMG_VERSION
     flags:
       - demo-env-variable
