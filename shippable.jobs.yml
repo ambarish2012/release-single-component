@@ -23,12 +23,10 @@ jobs:
     flags:
       - release-single-component
 
-  - name: version-deployment
-    type: release
-    steps:
-      - IN: demo-release-version
-      - IN: deploy-test-ecs
-      - TASK: managed
-        bump: beta
-    flags:
-      - release-single-component
+  - name: runSh-job                                
+    type: runSh                                 
+    steps:                                      
+      - IN: deploy-test-ecs                 
+      - TASK:
+        - script: echo "hello"
+        
