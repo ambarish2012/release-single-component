@@ -22,6 +22,7 @@ jobs:
     steps:                                      
       - IN: deploy-job                 
       - TASK:
+        - script: exit 0;
         - script: echo "testing env variable"
         - script: cat $DEPLOYJOB_STATE/manifests.json | jq '.'
         - script: cat $DEPLOYJOB_STATE/manifests.json | jq '.[].images' | jq '.[0].image'
